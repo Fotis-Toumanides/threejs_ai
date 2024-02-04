@@ -25,7 +25,7 @@ router.route('/').post(async (req, res) => {
         })
         const image = response.data.data[0].b64_json;
         //pass it to frontend:
-        res.status(200).json({ photo: image })
+        res.status(200).json({ photo: image });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Something went wrong" })
